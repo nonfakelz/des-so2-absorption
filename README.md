@@ -1,10 +1,10 @@
-# DES SO~2~ Absorption Prediction System
+# DES SO<sub>2</sub> Absorption Prediction System
 
-This is a web application for predicting SO~2~ absorption capacity of different Deep Eutectic Solvents (DES) under various conditions. The system uses a deep learning model trained on experimental data to make predictions.
+This is a web application for predicting SO<sub>2</sub> absorption capacity of different Deep Eutectic Solvents (DES) under various conditions. The system uses a deep learning model trained on experimental data to make predictions.
 
 ## Features
 
-- Predict SO absorption capacity for different DES combinations
+- Predict SO<sub>2</sub> absorption capacity for different DES combinations
 - Visualize how absorption capacity changes with temperature, pressure, or water content
 - Compare absorption capacity across different Hydrogen Bond Acceptors (HBA) or Hydrogen Bond Donors (HBD)
 - Interactive web interface with real-time predictions and visualizations
@@ -66,7 +66,7 @@ python main.py
 
 ## Model Information
 
-The prediction model is a neural network trained on experimental data of SO~2~ absorption in various DES systems. The model takes the following inputs:
+The prediction model is a neural network trained on experimental data of SO<sub>2</sub> absorption in various DES systems. The model takes the following inputs:
 
 - HBA type (one-hot encoded)
 - HBD type (one-hot encoded)
@@ -75,7 +75,7 @@ The prediction model is a neural network trained on experimental data of SO~2~ a
 - Pressure (kPa)
 - Water content (%)
 
-And outputs the SO~2~ absorption capacity in g/g (grams of SO~2~ per gram of DES).
+And outputs the SO<sub>2</sub> absorption capacity in g/g (grams of SO<sub>2</sub> per gram of DES).
 
 ## License
 
