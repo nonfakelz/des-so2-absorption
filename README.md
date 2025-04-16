@@ -39,7 +39,6 @@ pip install -r requirements.txt
    - `best_model.keras`: The trained TensorFlow model
    - `x_scaler.pkl`: Scaler for input features
    - `y_scaler.pkl`: Scaler for output values
-   - `cleaned_DES_data.csv`: Dataset with DES information
 
 ## Usage
 
