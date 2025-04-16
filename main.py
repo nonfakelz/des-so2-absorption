@@ -40,14 +40,20 @@ try:
     x_scaler = joblib.load('x_scaler.pkl')
     y_scaler = joblib.load('y_scaler.pkl')
     
-    data = pd.read_csv('cleaned_DES_data.csv')
+    hba_list = ['[Emim]Cl', '[N4444]Cl', '[P4444]Cl', '[Bmim]Cl', '[Ch]Cl', 'ACC', '[Bmim]Br', 
+                '[PPZ]Br', '[Hmim]Cl', 'Bet', 'L-car', 'CPL', 'Mat', '[Amim]Cl', '[MImH]Cl', 
+                '[BImH]Cl', '[EImH]Cl', '[Emim]Br', '[EimH]Cl', '[EimH][MOA]', '[EimH][TFA]', 
+                '[TEA]Cl']
     
-    hba_list = data['HBA'].unique().tolist()
-    hbd_list = data['HBD'].unique().tolist()
+    hbd_list = ['DCDA', 'Im', 'Ben-Im', 'Pyr', 'Tetz', '4-Mim', 'NFM', '[Epy]Br', 'EG', 'MA', 
+                'Urea', 'Thiourea', 'Triz', 'IMD', 'DMU', 'SN', 'Gly', 'Tz', 'PYD', 'PID', 
+                'CLAA', 'SUIM', 'NHS', 'MU', 'SAA', 'AA', 'Benzoicacid', 'MFA', 'EFA', 'MAA', 
+                '2-NH2Py', '3-NH2Py', '3-OHPy', '2-Mim', 'GC', 'CL', '[Epy]Cl', '4-NH2Py', 
+                '4-OHPy', '1, 3-PDO', 'TG', '2-OHPy']
     
-    temp_range = (data['T(K)'].min(), data['T(K)'].max())
-    pressure_range = (data['P(kPa)'].min(), data['P(kPa)'].max())
-    water_range = (data['w(H2O)%'].min(), data['w(H2O)%'].max())
+    temp_range = (293.0, 353.5)
+    pressure_range = (0.2, 127.3)
+    water_range = (0.0, 20.0)
     
     try:
         if hasattr(x_scaler, 'feature_names_in_'):
